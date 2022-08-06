@@ -1,6 +1,6 @@
 //works on phones now
 
-let _debug = true //change to true if editing the widget, false when finished
+let _debug = false //change to true if editing the widget, false when finished
 
 // Set "When interacting" = "Run Script"
 /* Put the letter of your team in the "Parameter" section
