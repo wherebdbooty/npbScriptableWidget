@@ -92,12 +92,10 @@ with(teamStack){
 
 for( let i = 0; i < game.length; i++ ) {
 	
-	game[i].home.logo += game[i].home.logo == "B"?"s":""
+	game[i].home.logo += game[i].home.logo == "B"?"s":"" //special case for Buffaloes logo
 	game[i].away.logo += game[i].away.logo == "B"?"s":""
 	
 	if( favoriteTeam == game[i].home.logo || favoriteTeam == game[i].away.logo ){
-			
-		//create stacks here
 		
 		let logos = {"home":'',"away":''}
 		
@@ -136,16 +134,9 @@ for( let i = 0; i < game.length; i++ ) {
 			textColor = Color.dynamic(Color.white(), Color.white())
 		}
 		
-		/*--use this to show the "starts at 18:00" view--*/
-		//delete game[i].home.score
-		//game[i].status = "18:00"
-		
 		let translatedText = translateStatus(game[i].status)
 
-
 		printScores(game[i])
-		
-
 		adjustBackground(translatedText)
 		formatStatusAreaText(teamStack.statusArea.addText(translatedText))
 		
